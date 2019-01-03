@@ -8,6 +8,7 @@ import NewNote from "./containers/NewNote";
 import Notes from "./containers/Notes";
 import AuthenticatedRoute from "./components/AuthenticatedRoute";
 import UnauthenticatedRoute from "./components/UnauthenticatedRoute";
+import Settings from "./containers/Settings";
 import Home from "./containers/Home";
 
 export default ({ childProps }) => (
@@ -23,6 +24,12 @@ export default ({ childProps }) => (
       path="/signup"
       exact
       component={Signup}
+      props={childProps}
+    />
+    <AuthenticatedRoute
+      path="/settings"
+      exact
+      component={Settings}
       props={childProps}
     />
     <AuthenticatedRoute
